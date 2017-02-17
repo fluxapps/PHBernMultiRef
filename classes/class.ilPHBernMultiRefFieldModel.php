@@ -28,6 +28,8 @@ class ilPHBernMultiRefFieldModel extends ilDclReferenceFieldModel {
 		$this->pl = ilPHBernMultiRefPlugin::getInstance();
 
 		parent::__construct($a_id);
+
+		$this->setStorageLocationOverride(1);
 	}
 
 
