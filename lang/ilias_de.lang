@@ -1,0 +1,4 @@
+info_input_field#:#Minimale Auswahl: %d Feld(er), Maximale Auswahl: %d Feld(er)
+exception_wrong_count#:#Die Anzahl ausgewählter Felder stimmt nicht mit der Beschränkung für dieses Feld überein. Bitte beachten Sie die minimale/maximale Auswahl.
+max_selectable#:#Maximale Auswahl
+mandatory_fields#:#Minimale Auswahl
