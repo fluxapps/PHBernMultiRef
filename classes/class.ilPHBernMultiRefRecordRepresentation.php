@@ -21,10 +21,10 @@ class ilPHBernMultiRefRecordRepresentation extends ilDclReferenceRecordRepresent
 			$value = array($value);
 		}
 
-		$html = "<ul>";
+		$html = "";
 
 		foreach ($value as $v) {
-			$html .= '<li>';
+			$html .= '- ';
 			$ref_record = ilDclCache::getRecordCache($v);
 			if (!$ref_record->getTableId() || !$record_field->getField() || !$record_field->getField()->getTableId()) {
 				//the referenced record_field does not seem to exist.
@@ -45,10 +45,10 @@ class ilPHBernMultiRefRecordRepresentation extends ilDclReferenceRecordRepresent
 					$html .= $ref_record->getRecordFieldHTML($field->getProperty(ilDclBaseFieldModel::PROP_REFERENCE));
 				}
 			}
-			$html .= '</li>';
+			$html .= '<br>';
 		}
 
-		$html .= '</ul>'; // cut away last <br>
+		$html = substr($html, 0, -4); // cut away last <br>
 
 		return $html;
 	}
